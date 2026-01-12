@@ -1,0 +1,36 @@
+{
+    "name": "create-muse-app",
+    "version": "1.0.0",
+    "type": "module",
+    "description": "CLI to scaffold new Muse apps",
+    "main": "dist/index.mjs",
+    "bin": {
+        "create-muse-app": "dist/index.mjs"
+    },
+    "scripts": {
+        "dev": "tsup --watch",
+        "build": "tsup",
+        "start": "node dist/index.mjs",
+        "prepublishOnly": "npm run build"
+    },
+    "keywords": [
+        "cli",
+        "scaffold",
+        "muse",
+        "template"
+    ],
+    "author": "",
+    "license": "MIT",
+    "dependencies": {
+        "cac": "^6.7.14",
+        "giget": "^1.2.1",
+        "picocolors": "^1.0.0",
+        "prompts": "^2.4.2"
+    },
+    "devDependencies": {
+        "@types/node": "^20.10.0",
+        "@types/prompts": "^2.4.9",
+        "tsup": "^8.0.1",
+        "typescript": "^5.3.3"
+    }
+}
