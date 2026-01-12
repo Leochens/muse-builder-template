@@ -1,0 +1,22 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  // To use MySQL:
+  // 1. Change provider to "mysql"
+  // 2. Update DATABASE_URL in .env to a mysql connection string
+  // url is managed in prisma.config.ts
+}
+
+model Todo {
+  id          String   @id @default(uuid())
+  title       String
+  completed   Boolean  @default(false)
+  userId      String   @map("user_id") // Maps to Supabase Auth user ID
+  createdAt   DateTime @default(now()) @map("created_at")
+  updatedAt   DateTime @updatedAt      @map("updated_at")
+
+  @@map("todos")
+}

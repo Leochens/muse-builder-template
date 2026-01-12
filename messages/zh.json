@@ -1,0 +1,19 @@
+{
+    "Index": {
+        "title": "Next.js 启动模板",
+        "description": "包含 Supabase, Prisma 和 AI 的全栈模板。"
+    },
+    "Auth": {
+        "login": "登录",
+        "logout": "登出",
+        "email": "邮箱",
+        "password": "密码"
+    },
+    "Todo": {
+        "title": "任务列表",
+        "add": "添加任务",
+        "placeholder": "需要做什么？",
+        "empty": "暂无任务。",
+        "generate_ai": "AI 生成"
+    }
+}

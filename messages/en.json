@@ -1,0 +1,19 @@
+{
+    "Index": {
+        "title": "Next.js Starter Template",
+        "description": "A full-stack template with Supabase, Prisma, and AI."
+    },
+    "Auth": {
+        "login": "Sign In",
+        "logout": "Sign Out",
+        "email": "Email",
+        "password": "Password"
+    },
+    "Todo": {
+        "title": "Tasks",
+        "add": "Add Task",
+        "placeholder": "What needs to be done?",
+        "empty": "No tasks yet.",
+        "generate_ai": "Generate with AI"
+    }
+}

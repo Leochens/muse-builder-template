@@ -1,0 +1,20 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+model Todo {
+  id          String   @id @default(uuid())
+  title       String
+  completed   Boolean  @default(false)
+  userId      String   @map("user_id") // Maps to Supabase Auth user ID
+  createdAt   DateTime @default(now()) @map("created_at")
+  updatedAt   DateTime @updatedAt      @map("updated_at")
+
+  @@map("todos")
+}
